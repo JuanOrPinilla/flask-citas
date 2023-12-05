@@ -1,12 +1,9 @@
-from Flask import Flask, redirect, render_template, request, flash, url_for
+from flask import Flask, redirect, render_template, request, flash, url_for
 from config import config 
 from database import db
 import psycopg2.extras
 import re
 import requests
-import base64
-from werkzeug.security import generate_password_hash, check_password_hash
-from cryptography.fernet import Fernet, InvalidToken
 
 #Routes
 from routes import historias
