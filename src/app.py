@@ -6,7 +6,6 @@ import re
 import requests
 
 #Routes
-from routes import historias
 from routes import citas
 
 
