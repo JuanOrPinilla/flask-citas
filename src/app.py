@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template, request, flash, url_for
+from Flask import Flask, redirect, render_template, request, flash, url_for
 from config import config 
 from database import db
 import psycopg2.extras
@@ -12,7 +12,9 @@ from cryptography.fernet import Fernet, InvalidToken
 from routes import historias
 from routes import citas
 
+
 app = Flask(__name__)
+app.config["SECRET_KEY"] = "SECRET_KEY"
 
 conn = db.get_db_connection()
 
